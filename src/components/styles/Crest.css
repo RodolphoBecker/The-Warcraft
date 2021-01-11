@@ -1,0 +1,60 @@
+.crest {
+    position: absolute;
+    bottom: 20%;
+}
+#crestButton:hover {
+    transition: all ease .5s;
+    opacity: .7;
+    transform: scale(.95);
+}
+#crestButton:focus {
+    outline:0;
+}
+#crestButton h1 {
+    color: #F6F25A
+}
+.general-content {
+    height: 100vh;
+    background-color: antiquewhite;
+}
+.general-content>div {
+    height: 100%;
+}
+.general-content>div>div {
+    height: 100%;
+    position: relative;
+}
+.general-content>div>div .sides {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease .5s;
+    width: 50%;
+    position: absolute;
+}
+.general-content>div>div .sides.fullSize {
+    width: 100%;
+    transition: all ease .5s;
+}
+.general-content>div>div .sides.fullSize .crest button {
+    pointer-events: none;
+}
+.general-content>div>div .sides.notShow {
+    display: none;
+    transition: all ease .5s;
+}
+.general-content>div>div .sides.horde{
+    transition: all ease .5s;    
+    left: 0;
+}
+.general-content>div>div .sides.alliance {
+    height: 100%;
+    right: 0;
+}
+.navigation {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+	justify-content: space-evenly;
+}

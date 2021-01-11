@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LifeCraft';
+    src: url('LifeCraft.woff2') format('woff2'),
+        url('LifeCraft.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
