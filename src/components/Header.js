@@ -10,6 +10,21 @@ const Header = (props) => {
     //     const headerId = document.getElementById('header').offsetHeight;
     //     props.headerHeight(headerId);
     // },[]);
+
+
+    // useEffect(() => {
+    //     function onScroll () {
+    //         let currentPosition = window.pageYOffset;
+    //         if (currentPosition > scrollTop){
+    //             setSticked('sticked');
+    //         } else {
+    //             setSticked('notSticked');
+    //         }
+    //         setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
+    //     }
+    //     window.addEventListener('scroll', onScroll);
+    //     return () => window.removeEventListener('scroll', onScroll);
+    // },[scrollTop]);
     
     return(
         <div id="header" className="headerComponent" style={{ backgroundImage: `url(${HeaderBackground})` }}>

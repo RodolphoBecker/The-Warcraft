@@ -167,4 +167,38 @@ button {
     opacity: .7;
     transform: scale(.97);
 }
+.main-section {
+    background-repeat: no-repeat;
+}
+.main-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #b1997f;
+    text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0,0,0,.8);
+    font-family: 'Montserrat';
+}
+.internal-title {
+    line-height: 1.5;
+	font-family: 'LifeCraft';
+	color: #fff;
+	text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0,0,0,.8);
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+.internal-section {
+    padding: 100px 0;
+}
+.internal-subtitle {
+    line-height: 1.5;
+	font-family: 'Montserrat';
+	color: #fff;
+	text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0,0,0,.8);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-style: italic;
+}
 /* Default */

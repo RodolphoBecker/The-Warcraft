@@ -1,0 +1,6 @@
+.crest-button:focus {
+    outline: none;
+}
+.crest-button img {
+    width: 200px;
+}
