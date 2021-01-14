@@ -2,11 +2,13 @@ import './styles/About.css';
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import RacesCrestList from '../components/RacesCrestList';
+import RolesCrestList from '../components/RolesCrestList';
 import MainBackground from '../assets/background-horde-orc.jpg';
 import HordeColor from '../assets/background-horde-theme.jpg';
 import StylizedDivider from '../assets/image-column-divisor.png';
 import SectionDivider from '../assets/image-column-divisor-02.png';
 import StandardBackground from '../assets/background-standard-brown.jpg';
+import HordeBackground from '../assets/background-horde-page-01.jpg';
 // import TitleDecoration from '../assets/image-title-under.png';
 
 const AboutHorde = () => {
@@ -61,7 +63,24 @@ const AboutHorde = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>	
+                        </div>
+                        <div className="section background-section" style={{ backgroundImage: `url(${HordeBackground})` }}>
+                            <div className="stylized-divider bottom-divider" style={{backgroundImage: `url(${StylizedDivider})`}}></div>
+                        </div>
+                        <div id="roles" className="section" style={{ backgroundImage: `url(${HordeColor})` }}>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-12 col-lg-12">
+                                        <div className="stylized-title horde-title">
+                                            <h1>Classes</h1>
+                                        </div>
+                                    </div>
+                                    <div className="content w-100 d-flex flex-wrap">
+                                        <RolesCrestList />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </ReactFullpage.Wrapper>
                 );
             }}

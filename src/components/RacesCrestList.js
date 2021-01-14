@@ -1,5 +1,5 @@
 import './styles/RacesCrestList.css';
-import React from 'react';
+import React, {} from 'react';
 import { Link } from 'react-router-dom';
 import OrcCrest from '../assets/crest-horde-orc.png';
 import TaurenCrest from '../assets/crest-horde-tauren.png';
@@ -9,12 +9,13 @@ import BloodElvesCrest from '../assets/crest-horde-blood-elf.png';
 import GoblinCrest from '../assets/crest-horde-goblin.png';
 
 const RacesCresList = (props) => {
+	
 	const hordeRaces = [
 		{
 			id: 0,
 			race: 'Orc',
 			crest: OrcCrest,
-			page: '/about/orc'
+			page: 'about/orc'
 		},
 		{
 			id: 1,
@@ -50,6 +51,7 @@ const RacesCresList = (props) => {
 
 	const mappedHordeRaces = hordeRaces.map((race) => {
 		var emptySpace = '';
+		
 		if (race.id === props.racePage) {
 			emptySpace = 'd-none'
 		}

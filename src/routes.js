@@ -17,7 +17,7 @@ const Routes = () => {
     
     // const[ headerHeight, setHeaderHeight] = useState(null);
     // console.log(headerHeight);
-    
+
     return(
         <BrowserRouter>
             <Switch>
@@ -32,6 +32,7 @@ const Routes = () => {
                     <Route path="/about/forsaken" component={ForsakenPage} />
                     <Route path="/about/blood_elf" component={BloodElvesPage} />
                     <Route path="/about/goblin" component={GoblinPage} />
+                    {/* <Route path='/about/goblin' render={(props) => <GoblinPage />} /> */}
                 </div>
             </Switch>
         </BrowserRouter>

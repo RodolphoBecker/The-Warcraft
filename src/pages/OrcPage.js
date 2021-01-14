@@ -76,19 +76,19 @@ const OrcPage = () => {
                     </div>
                 </section>
                 <section id="race-list">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-12">
-                            <div className="stylized-title horde-title">
-                                <h1>More Horde Races</h1>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-lg-12">
+                                <div className="stylized-title horde-title">
+                                    <h1>More Horde Races</h1>
+                                </div>
+                            </div>
+                            <div className="content w-100 d-flex flex-wrap">
+                                <RacesCrestList racePage={pageIndex} />
                             </div>
                         </div>
-                        <div className="content w-100 d-flex flex-wrap">
-                            <RacesCrestList racePage={pageIndex} />
-                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
             </div>
         </React.Fragment>
     );

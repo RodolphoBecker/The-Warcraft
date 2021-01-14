@@ -3,15 +3,14 @@ import React, {useState} from 'react';
 import MainBackground from '../assets/background-internal-goblin.jpg';
 import MainCharacter from '../assets/image-goblin-character.png';
 import PageRaceBackground from '../assets/background-goblin.jpg';
-import HomeZoneImage from '../assets/background-mulgore.jpg';
-import HomeCityImage from '../assets/background-thunderbluff.jpg';
+import HomeZoneImage from '../assets/background-kezan.jpg';
+import HomeCityImage from '../assets/background-bilgewater.jpg';
 import StylizedDivider from '../assets/image-column-divisor.png';
 import SectionDivider from '../assets/image-column-divisor-02.png';
 import RacesCrestList from '../components/RacesCrestList';
 
-const BloodElvesPage = () => {
+const GoblinPage = (props) => {
     const[pageIndex] = useState(5);
-
     return(
         <React.Fragment>
         <div style={{ backgroundColor: "#0b1308" }}>
@@ -58,17 +57,17 @@ const BloodElvesPage = () => {
                     <div className="row">
                         <div className="col-12 col-lg-12">
                             <div className="stylized-title horde-title">
-                                <h1>Home Zone - Eversong Woods</h1>
+                                <h1>Home Zone - Kezan</h1>
                             </div>
                             <div className="content main-text">
-                                <p>The blood elves have called the resplendent Eversong Woods home for millennia, but the stewardship of this forested region has not been without its perils. Bent on harnessing the elves’ mystical Sunwell, Prince Arthas and the Scourge carved a path of destruction through the heart of Quel’Thalas during the Third War, leaving a tainted scar across Eversong Woods. Thus far the elves have worked extensively to drive the lingering undead from their lands and cleanse the wounds of Arthas’s assault, but the task is far from over. As Quel’Thalas looks toward a new future, ensuring the safety and wellbeing of Eversong will be a critical first step.</p>
+                                <p>Thanks to Kezan’s prominence as a mercantile hub, it’s been divided into dozens of districts by the trade princes, who view every inch of land as an opportunity waiting to be converted into gold and silver. Kezan’s tropical palms are bisected with miles of roadway, and even the beaches are beginning to be paved over by goblin ambitions. Now, nature is reclaiming the island of Kezan – massive Mount Kajaro has erupted with the Cataclysm, flooding the island with searing lava and sending tidal recoil sweeping through Kezan’s harbors.</p>
                             </div>
                             <img className="img-fluid mt-5 mb-5" src={HomeZoneImage} alt={HomeZoneImage}></img>
                             <div className="stylized-title horde-title">
-                                <h1>Home City - Silvermoon City</h1>
+                                <h1>Home City - Bilgewater Harbor</h1>
                             </div>
                             <div className="content main-text">
-                                <p>Less than a decade ago, the wondrous high elven capital of Silvermoon was nearly destroyed during a brutal Scourge invasion. Under the command of Prince Arthas, the undead ravaged the city and went on to corrupt the sacred waters of the Sunwell. Despite this horrific event, the high elves—now known as the blood elves—have labored to rebuild their ruined capital. Most recently, the rebirth of the Sunwell has lifted spirits among the elves, and they have continued to heal Silvermoon’s scars in the hopes of returning the crown jewel of Quel’Thalas to its former glory.</p>
+                                <p>Following the destruction of Kezan’s port homes, many of the Bilgewater Cartel’s surviving goblins have fled for their lives, joining their new Horde comrades and settling in Azshara’s Bilgewater Harbor. The town’s origins are often speculated on by non-goblins; Bilgewater Harbor sprang up in record time after the Kezan refugees’ arrival, and its’ quintessentially goblin construction has fostered an atmosphere of debauchery and disorder. Orgrimmar’s military has only recently set boots down in Bilgewater, but the harbor’s value as a strategic front conflicts with some pushy goblins’ desire to turn it into a new version of their ancestral home (abounding with gambling dens, pleasure houses and other commercial luxuries). This cultural rift is likely to breed tension in the ranks of the Horde sooner rather than later.</p>
                             </div>
                             <img className="img-fluid mt-5 mb-5" src={HomeCityImage} alt={HomeCityImage}></img>
                         </div>
@@ -94,4 +93,4 @@ const BloodElvesPage = () => {
     );
 }
 
-export default BloodElvesPage;
+export default GoblinPage;
