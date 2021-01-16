@@ -11,7 +11,7 @@ import StandardBackground from '../assets/background-standard-brown.jpg';
 import HordeBackground from '../assets/background-horde-page-01.jpg';
 // import TitleDecoration from '../assets/image-title-under.png';
 
-const AboutHorde = () => {
+const AboutHorde = (props) => {
     return(
         <ReactFullpage
             //fullpage options
@@ -76,7 +76,7 @@ const AboutHorde = () => {
                                         </div>
                                     </div>
                                     <div className="content w-100 d-flex flex-wrap">
-                                        <RolesCrestList />
+                                        <RolesCrestList selectRole={props.selectRole} />
                                     </div>
                                 </div>
                             </div>
