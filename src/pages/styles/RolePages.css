@@ -1,0 +1,8 @@
+.internal-full-pages {
+    height: calc(100vh - 85px);
+    margin-top: 85px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}

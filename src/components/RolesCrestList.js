@@ -23,73 +23,73 @@ const RolesCrestList = (props) => {
 			id: 0,
 			role: 'Warrior',
 			crest: WarriorCrest,
-			page: '/about/roles'
+			page: '/about/warrior'
 		},
 		{
 			id: 1,
 			role: 'Warlock',
 			crest: WarlockCrest,
-			page: '/about/roles'
+			page: '/about/warlock'
 		},
 		{
 			id: 2,
 			role: 'Shaman',
 			crest: ShamanCrest,
-			page: '/about/roles'
+			page: '/about/shaman'
 		},
 		{
 			id: 3,
 			role: 'Rogue',
 			crest: RogueCrest,
-			page: '/about/roles'
+			page: '/about/rogue'
 		},
 		{
 			id: 4,
 			role: 'Priest',
 			crest: PriestCrest,
-			page: '/about/roles'
+			page: '/about/priest'
 		},
 		{
 			id: 5,
 			role: 'Paladin',
 			crest: PaladinCrest,
-			page: '/about/roles'
+			page: '/about/paladin'
         },
         {
 			id: 6,
 			role: 'Monk',
 			crest: MonkCrest,
-			page: '/about/roles'
+			page: '/about/monk'
         },
         {
 			id: 7,
 			role: 'Mage',
 			crest: MageCrest,
-			page: '/about/roles'
+			page: '/about/mage'
         },
         {
 			id: 8,
 			role: 'Hunter',
 			crest: HunterCrest,
-			page: '/about/roles'
+			page: '/about/hunter'
         },
         {
 			id: 9,
 			role: 'Druid',
 			crest: DruidCrest,
-			page: '/about/roles'
+			page: '/about/druid'
         },
         {
 			id: 10,
 			role: 'Demon Hunter',
 			crest: DemonHunterCrest,
-			page: '/about/roles'
+			page: '/about/demonHunter'
         },
         {
 			id: 11,
 			role: 'Death Knight',
 			crest: DeathKnight,
-			page: '/about/roles'
+			page: '/about/deathKnight'
         },
         
 	]
@@ -100,15 +100,11 @@ const RolesCrestList = (props) => {
 		if (role.id === props.rolePage) {
 			emptySpace = 'd-none'
 		}
-
-		const setRole = () => {
-			props.selectRole(role.role)
-		}
 		
 		return(
 			<div key={role.id} className={`col-12 col-lg-2 ${emptySpace}`} style={{ textAlign: "center" }}>
 				<Link to={role.page}>
-					<button onClick={() => setRole() } className="crest-button default-hover">
+					<button className="crest-button default-hover">
 						<img className="img-fluid" alt={role.role} src={role.crest}></img>
 					</button>
 				</Link>

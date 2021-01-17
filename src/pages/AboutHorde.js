@@ -76,7 +76,7 @@ const AboutHorde = (props) => {
                                         </div>
                                     </div>
                                     <div className="content w-100 d-flex flex-wrap">
-                                        <RolesCrestList selectRole={props.selectRole} />
+                                        <RolesCrestList />
                                     </div>
                                 </div>
                             </div>

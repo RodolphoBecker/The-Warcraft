@@ -170,7 +170,7 @@ button {
 .main-section {
     background-repeat: no-repeat;
 }
-.main-text p {
+.main-text p, .main-text li {
     font-size: 1.2rem;
     font-weight: 400;
     color: #b1997f;
