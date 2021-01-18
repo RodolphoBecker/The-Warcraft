@@ -14,6 +14,12 @@ import HordeLogo from './assets/logo-horde.png';
 import AllianceLogo from './assets/logo-alliance.png';
 import WarriorPage from './pages/WarriorPage';
 import WarlockPage from './pages/WarlockPage';
+import PaladinPage from './pages/PaladinPage';
+import HunterPage from './pages/HunterPage';
+import RoguePage from './pages/RoguePage';
+import PriestPage from './pages/PriestPage';
+import MonkPage from './pages/MonkPage';
+import ShamanPage from './pages/ShamanPage';
 
 const Routes = () => {
     return(
@@ -37,6 +43,12 @@ const Routes = () => {
                     <div>
                         <Route path="/about/warrior" component={WarriorPage} />
                         <Route path="/about/warlock" component={WarlockPage} />
+                        <Route path="/about/paladin" component={PaladinPage} />
+                        <Route path="/about/hunter" component={HunterPage} />
+                        <Route path="/about/rogue" component={RoguePage} />
+                        <Route path="/about/priest" component={PriestPage} />
+                        <Route path="/about/shaman" component={ShamanPage} />
+                        <Route path="/about/monk" component={MonkPage} />
                     </div>
                 </div>
             </Switch>

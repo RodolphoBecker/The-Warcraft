@@ -1,5 +1,5 @@
 import './styles/RolesCrestList.css';
-import React, {useState} from 'react';
+import React, {} from 'react';
 import { Link } from 'react-router-dom';
 import WarriorCrest from '../assets/roles/crest-warrior.png';
 import WarlockCrest from '../assets/roles/crest-warlock.png';
@@ -16,8 +16,6 @@ import DeathKnight from '../assets/roles/crest-deathKnight.png';
 
 
 const RolesCrestList = (props) => {
-	const[page, setPage] = useState('');
-
 	const roles = [
 		{
 			id: 0,
