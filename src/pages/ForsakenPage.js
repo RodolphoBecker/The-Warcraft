@@ -1,5 +1,5 @@
 import './styles/RacePages.css'
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MainBackground from '../assets/background-internal-forsaken.jpg';
 import MainCharacter from '../assets/image-forsaken-character.png';
 import PageRaceBackground from '../assets/background-forsaken.jpg';
@@ -11,6 +11,10 @@ import RacesCrestList from '../components/RacesCrestList';
 
 const ForsakenPage = () => {
     const[pageIndex] = useState(3);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
 
     return(
         <React.Fragment>

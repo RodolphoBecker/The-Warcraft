@@ -1,5 +1,5 @@
 import './styles/RacePages.css'
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MainBackground from '../assets/background-internal-tauren.jpg';
 import MainCharacter from '../assets/image-tauren-character.png';
 import PageRaceBackground from '../assets/background-tauren.jpg';
@@ -11,6 +11,10 @@ import RacesCrestList from '../components/RacesCrestList';
 
 const TaurenPage = () => {
     const[pageIndex] = useState(1);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
 
     return(
         <React.Fragment>

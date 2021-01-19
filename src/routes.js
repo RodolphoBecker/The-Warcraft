@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutHorde from './pages/AboutHorde';
@@ -20,17 +20,23 @@ import RoguePage from './pages/RoguePage';
 import PriestPage from './pages/PriestPage';
 import MonkPage from './pages/MonkPage';
 import ShamanPage from './pages/ShamanPage';
+import MagePage from './pages/MagePage';
+import DruidPage from './pages/DruidPage';
+import DemonHunterPage from './pages/DemonHunterPage';
+import DeathKnightPage from './pages/DeathKnightPage';
 
 const Routes = () => {
+    const[layoutPage, setLayoutPage] = useState('')
+
     return(
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Home} />
                 <div>
-					<Header hordeLogo={HordeLogo} allianceLogo={AllianceLogo} />
+					<Header hordeLogo={HordeLogo} allianceLogo={AllianceLogo} layoutPage={layoutPage} />
                     <div>
-                        <Route path="/about/horde" render={(props) => <AboutHorde />} />
-                        <Route path="/about/alliance" component={AboutAlliance} />
+                        <Route path="/about/horde" render={(props) => <AboutHorde layoutPage={setLayoutPage}  />} />
+                        <Route path="/about/alliance" render={(props) => <AboutAlliance layoutPage={setLayoutPage} />} />
                     </div>
                     <div>
                         <Route path="/about/orc" component={OrcPage} />
@@ -49,6 +55,10 @@ const Routes = () => {
                         <Route path="/about/priest" component={PriestPage} />
                         <Route path="/about/shaman" component={ShamanPage} />
                         <Route path="/about/monk" component={MonkPage} />
+                        <Route path="/about/mage" component={MagePage} />
+                        <Route path="/about/druid" component={DruidPage} />
+                        <Route path="/about/demonHunter" component={DemonHunterPage} />
+                        <Route path="/about/deathKnight" component={DeathKnightPage} />
                     </div>
                 </div>
             </Switch>

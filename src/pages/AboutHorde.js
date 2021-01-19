@@ -1,5 +1,5 @@
 import './styles/About.css';
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import RacesCrestList from '../components/RacesCrestList';
 import RolesCrestList from '../components/RolesCrestList';
@@ -12,6 +12,11 @@ import HordeBackground from '../assets/background-horde-page-01.jpg';
 // import TitleDecoration from '../assets/image-title-under.png';
 
 const AboutHorde = (props) => {
+
+    useEffect(() => {
+        props.layoutPage('Horde');
+    });
+
     return(
         <ReactFullpage
             //fullpage options
@@ -21,7 +26,7 @@ const AboutHorde = (props) => {
             render={({ state, fullpageApi }) => {
                 return (
                     <ReactFullpage.Wrapper>
-                        <div id="" className="section main-section" style={{ backgroundImage: `url(${MainBackground})` }}>
+                        <div id="" className="section main-section" style={{ backgroundImage: `url(${MainBackground})`, backgroundColor: "#8C1616" }}>
                             <div className="container">
                                 <div className="row">
                                     <div className="col-12 col-lg-12">
@@ -59,7 +64,7 @@ const AboutHorde = (props) => {
                                         </div>
                                     </div>
                                     <div className="content w-100 d-flex flex-wrap">
-                                        <RacesCrestList />
+                                        <RacesCrestList races="Horde" />
                                     </div>
                                 </div>
                             </div>

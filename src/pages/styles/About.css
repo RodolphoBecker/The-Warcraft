@@ -12,6 +12,11 @@
     border-bottom: 5px solid;
 	display: inline-block;
 }
+.stylized-title.alliance-title h1 {
+    color: #445c8c; 
+    border-bottom: 5px solid;
+	display: inline-block;
+}
 /* .title-decoration {
     position: absolute;
     bottom: 0;
@@ -25,5 +30,6 @@
     background-position: center;
 }
 .main-section {
-    background-position: center;
+    background-position: top center;
+
 }

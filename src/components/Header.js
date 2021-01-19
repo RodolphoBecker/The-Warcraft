@@ -5,43 +5,46 @@ import { Link } from 'react-router-dom';
 import HeaderDivider from '../assets/image-column-divisor-02.png';
 
 const Header = (props) => {
-
-    // useEffect(() => {
-    //     const headerId = document.getElementById('header').offsetHeight;
-    //     props.headerHeight(headerId);
-    // },[]);
-
-
-    // useEffect(() => {
-    //     function onScroll () {
-    //         let currentPosition = window.pageYOffset;
-    //         if (currentPosition > scrollTop){
-    //             setSticked('sticked');
-    //         } else {
-    //             setSticked('notSticked');
-    //         }
-    //         setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-    //     }
-    //     window.addEventListener('scroll', onScroll);
-    //     return () => window.removeEventListener('scroll', onScroll);
-    // },[scrollTop]);
-    
     return(
-        <div id="header" className="headerComponent" style={{ backgroundImage: `url(${HeaderBackground})` }}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 col-lg-12">
-                        <div className="logo-link default-hover d-flex justify-content-between">
-                            <Link to="/">
-                                <img className="img-fluid" alt="Warcraft Icon" src={props.hordeLogo}></img>
-                            </Link>
-                            <div className="navigation"></div>
+        <React.Fragment>
+            {props.layoutPage === 'Horde' ?
+                <div id="header" className="headerComponent" style={{ backgroundImage: `url(${HeaderBackground})` }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-lg-12 d-flex justify-content-center">
+                                <div className="logo-link default-hover d-flex justify-content-between">
+                                    <Link to="/">
+                                        <img className="img-fluid" alt="Warcraft Icon" src={props.hordeLogo}></img>
+                                    </Link>
+                                    <div className="navigation"></div>
+                                </div>
+                                <div style={{ margin: 'auto 0' }}>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div className="header-divider" style={{ backgroundImage: `url(${HeaderDivider})` }}></div>
                 </div>
-            </div>
-            <div className="header-divider" style={{ backgroundImage: `url(${HeaderDivider})` }}></div>
-        </div>
+            :
+                <div id="header" className="headerComponent" style={{ backgroundImage: `url(${HeaderBackground})` }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-lg-12 d-flex justify-content-center">
+                                <div className="logo-link default-hover d-flex justify-content-between">
+                                    <Link to="/">
+                                        <img className="img-fluid" alt="Warcraft Icon" src={props.allianceLogo}></img>
+                                    </Link>
+                                    <div className="navigation"></div>
+                                </div>
+                                <div style={{ margin: 'auto 0' }}>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="header-divider" style={{ backgroundImage: `url(${HeaderDivider})` }}></div>
+                </div>
+            }
+        </React.Fragment>
     );
 }
 

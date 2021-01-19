@@ -1,34 +1,35 @@
 import './styles/RolePages.css'
 import React, {useState, useEffect} from 'react';
-import MainBackground from '../assets/roles/background-internal-rogue.jpg';
-import MainCharacter from '../assets/roles/image-rogue-character.png';
-import PageRaceBackground from '../assets/roles/background-rogue.jpg';
+import MainBackground from '../assets/roles/background-internal-druid.jpg';
+import MainCharacter from '../assets/roles/image-druid-character.png';
+import PageRaceBackground from '../assets/roles/background-druid.jpg';
 import StylizedDivider from '../assets/image-column-divisor.png';
 import SectionDivider from '../assets/image-column-divisor-02.png';
 import RolesCrestList from '../components/RolesCrestList';
 
 const WarriorPage = () => {
-    const[pageIndex] = useState(3);
+    const[pageIndex] = useState(9);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     });
 
-    const weapons = [ 'Daggers', 'Fist Weapons', 'One-Handed Axes', 'One-Handed Maces', 'One-Handed Swords' ]
+    const weapons = [ 'Daggers', 'Fist Weapons', 'Maces', 'Polearms', 'Staves']
 
     const mappedWeapons = weapons.map((weapon) => {
         return(
             <li>{weapon}</li>
         );
     });
+    console.log(pageIndex)
 
     return(
-        <div style={{ backgroundColor: "#0d0c12" }}>
+        <div style={{ backgroundColor: "#0f1a16" }}>
             <section id="main-section" className="internal-full-pages main-section" style={{ backgroundImage: `url(${MainBackground})`, overflow: 'hidden' }}>
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-12 col-lg-6">
-                            <h1 className="internal-title">Rogue</h1>
+                            <h1 className="internal-title">Druid</h1>
                         </div>
                         <div className="col-12 col-lg-6 d-flex justify-content-center">
                             <img className="" loading="lazy" alt={MainCharacter} src={MainCharacter}></img>
@@ -42,16 +43,16 @@ const WarriorPage = () => {
                     <div className="row">
                         <div className="col-12 col-lg-12">
                             <div className="stylized-title horde-title">
-                                <h1>Prowling Cutpurses</h1>
+                                <h1>Savage Shapeshifters</h1>
                             </div>
                             <div className="content main-text">
-                                <p>For rogues, the only code is the contract, and their honor is purchased in gold. Free from the constraints of a conscience, these mercenaries rely on brutal and efficient tactics. Lethal assassins and masters of stealth, they will approach their marks from behind, piercing a vital organ and vanishing into the shadows before the victim hits the ground.</p>
+                                <p>Druids harness the vast powers of nature to preserve balance and protect life. With experience, druids can unleash nature’s raw energy against their enemies, raining celestial fury on them from a great distance, binding them with enchanted vines, or ensnaring them in unrelenting cyclones.</p>
                             </div>
                             <div className="stylized-title horde-title">
                                 <h1>Class Information</h1>
                             </div>
                             <div className="content main-text">
-                                <p>Rogues often initiate combat with a surprise attack from the shadows, leading with vicious melee strikes. When in protracted battles, they utilize a successive combination of carefully chosen attacks to soften the enemy up for a killing blow. Rogues must take special care when selecting targets so that their combo attacks are not wasted, and they must be conscious of when to hide or flee if a battle turns against them.   </p>
+                                <p>Druids are versatile combatants, in that they can fulfill nearly every role – healing, tanking, and damage dealing. It’s critical that druids tailor the form they choose to the situation, as each form bears a specific purpose.</p>
                             </div>
                         </div>
                         <div className="col-12 col-lg-6">

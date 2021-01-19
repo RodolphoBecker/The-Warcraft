@@ -1,34 +1,35 @@
 import './styles/RolePages.css'
 import React, {useState, useEffect} from 'react';
-import MainBackground from '../assets/roles/background-internal-rogue.jpg';
-import MainCharacter from '../assets/roles/image-rogue-character.png';
-import PageRaceBackground from '../assets/roles/background-rogue.jpg';
+import MainBackground from '../assets/roles/background-internal-deathKnight.jpg';
+import MainCharacter from '../assets/roles/image-DeathKnight-character.png';
+import PageRaceBackground from '../assets/roles/background-deathKnight.jpg';
 import StylizedDivider from '../assets/image-column-divisor.png';
 import SectionDivider from '../assets/image-column-divisor-02.png';
 import RolesCrestList from '../components/RolesCrestList';
 
 const WarriorPage = () => {
-    const[pageIndex] = useState(3);
+    const[pageIndex] = useState(11);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     });
 
-    const weapons = [ 'Daggers', 'Fist Weapons', 'One-Handed Axes', 'One-Handed Maces', 'One-Handed Swords' ]
+    const weapons = [ 'Axes', 'Maces', 'Swords', 'Polearms']
 
     const mappedWeapons = weapons.map((weapon) => {
         return(
             <li>{weapon}</li>
         );
     });
+    console.log(pageIndex)
 
     return(
-        <div style={{ backgroundColor: "#0d0c12" }}>
+        <div style={{ backgroundColor: "#05131c" }}>
             <section id="main-section" className="internal-full-pages main-section" style={{ backgroundImage: `url(${MainBackground})`, overflow: 'hidden' }}>
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-12 col-lg-6">
-                            <h1 className="internal-title">Rogue</h1>
+                            <h1 className="internal-title">Death Knight</h1>
                         </div>
                         <div className="col-12 col-lg-6 d-flex justify-content-center">
                             <img className="" loading="lazy" alt={MainCharacter} src={MainCharacter}></img>
@@ -42,16 +43,16 @@ const WarriorPage = () => {
                     <div className="row">
                         <div className="col-12 col-lg-12">
                             <div className="stylized-title horde-title">
-                                <h1>Prowling Cutpurses</h1>
+                                <h1>Heralds of Doom</h1>
                             </div>
                             <div className="content main-text">
-                                <p>For rogues, the only code is the contract, and their honor is purchased in gold. Free from the constraints of a conscience, these mercenaries rely on brutal and efficient tactics. Lethal assassins and masters of stealth, they will approach their marks from behind, piercing a vital organ and vanishing into the shadows before the victim hits the ground.</p>
+                                <p>When the Lich King’s control over his death knights was broken, his former champions found their new purpose as Knights of the Ebon Blade. After Bolvar Fordragon donned the helm to keep the undead Scourge contained, he called forth a new generation of death knights to join the Ebon Blade's cause.</p>
                             </div>
                             <div className="stylized-title horde-title">
                                 <h1>Class Information</h1>
                             </div>
                             <div className="content main-text">
-                                <p>Rogues often initiate combat with a surprise attack from the shadows, leading with vicious melee strikes. When in protracted battles, they utilize a successive combination of carefully chosen attacks to soften the enemy up for a killing blow. Rogues must take special care when selecting targets so that their combo attacks are not wasted, and they must be conscious of when to hide or flee if a battle turns against them.   </p>
+                                <p>Death Knights engage their foes up-close, supplementing swings of their weapons with dark magic that renders enemies vulnerable or damages them with unholy power. They drag foes into one-on-one conflicts, compelling them to focus their attacks away from weaker companions. To prevent their enemies from fleeing their grasp, death knights must remain mindful of the power they call forth from runes, and pace their attacks appropriately.</p>
                             </div>
                         </div>
                         <div className="col-12 col-lg-6">
@@ -60,7 +61,7 @@ const WarriorPage = () => {
                             </div>
                             <div className="content main-text">
                                 <ul>
-                                    <li>Leather</li>
+                                    <li>Plate</li>
                                 </ul>
                             </div>
                         </div>

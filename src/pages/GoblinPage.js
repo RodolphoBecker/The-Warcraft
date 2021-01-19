@@ -1,5 +1,5 @@
 import './styles/RacePages.css'
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MainBackground from '../assets/background-internal-goblin.jpg';
 import MainCharacter from '../assets/image-goblin-character.png';
 import PageRaceBackground from '../assets/background-goblin.jpg';
@@ -11,6 +11,11 @@ import RacesCrestList from '../components/RacesCrestList';
 
 const GoblinPage = (props) => {
     const[pageIndex] = useState(5);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return(
         <React.Fragment>
         <div style={{ backgroundColor: "#0b1308" }}>

@@ -23,7 +23,7 @@ const WarriorPage = () => {
     });
 
     return(
-        <div style={{ backgroundColor: "#1c0905" }}>
+        <div style={{ backgroundColor: "#061510" }}>
             <section id="main-section" className="internal-full-pages main-section" style={{ backgroundImage: `url(${MainBackground})`, overflow: 'hidden' }}>
                 <div className="container">
                     <div className="row align-items-center">

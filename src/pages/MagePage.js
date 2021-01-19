@@ -1,34 +1,35 @@
 import './styles/RolePages.css'
 import React, {useState, useEffect} from 'react';
-import MainBackground from '../assets/roles/background-internal-rogue.jpg';
-import MainCharacter from '../assets/roles/image-rogue-character.png';
-import PageRaceBackground from '../assets/roles/background-rogue.jpg';
+import MainBackground from '../assets/roles/background-internal-mage.jpg';
+import MainCharacter from '../assets/roles/image-mage-character.png';
+import PageRaceBackground from '../assets/roles/background-mage.jpg';
 import StylizedDivider from '../assets/image-column-divisor.png';
 import SectionDivider from '../assets/image-column-divisor-02.png';
 import RolesCrestList from '../components/RolesCrestList';
 
 const WarriorPage = () => {
-    const[pageIndex] = useState(3);
+    const[pageIndex] = useState(7);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     });
 
-    const weapons = [ 'Daggers', 'Fist Weapons', 'One-Handed Axes', 'One-Handed Maces', 'One-Handed Swords' ]
+    const weapons = [ 'Wands', 'Daggers', 'One-Handed Swords', 'Staves']
 
     const mappedWeapons = weapons.map((weapon) => {
         return(
             <li>{weapon}</li>
         );
     });
+    console.log(pageIndex)
 
     return(
-        <div style={{ backgroundColor: "#0d0c12" }}>
+        <div style={{ backgroundColor: "#140e1a" }}>
             <section id="main-section" className="internal-full-pages main-section" style={{ backgroundImage: `url(${MainBackground})`, overflow: 'hidden' }}>
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-12 col-lg-6">
-                            <h1 className="internal-title">Rogue</h1>
+                            <h1 className="internal-title">Mage</h1>
                         </div>
                         <div className="col-12 col-lg-6 d-flex justify-content-center">
                             <img className="" loading="lazy" alt={MainCharacter} src={MainCharacter}></img>
@@ -42,16 +43,16 @@ const WarriorPage = () => {
                     <div className="row">
                         <div className="col-12 col-lg-12">
                             <div className="stylized-title horde-title">
-                                <h1>Prowling Cutpurses</h1>
+                                <h1>Masters of Time and Space</h1>
                             </div>
                             <div className="content main-text">
-                                <p>For rogues, the only code is the contract, and their honor is purchased in gold. Free from the constraints of a conscience, these mercenaries rely on brutal and efficient tactics. Lethal assassins and masters of stealth, they will approach their marks from behind, piercing a vital organ and vanishing into the shadows before the victim hits the ground.</p>
+                                <p>Students gifted with a keen intellect and unwavering discipline may walk the path of the mage. The arcane magic available to magi is both great and dangerous, and thus is revealed only to the most devoted practitioners. To avoid interference with their spellcasting, magi wear only cloth armor, but arcane shields and enchantments give them additional protection. To keep enemies at bay, magi can summon bursts of fire to incinerate distant targets and cause entire areas to erupt, setting groups of foes ablaze.</p>
                             </div>
                             <div className="stylized-title horde-title">
                                 <h1>Class Information</h1>
                             </div>
                             <div className="content main-text">
-                                <p>Rogues often initiate combat with a surprise attack from the shadows, leading with vicious melee strikes. When in protracted battles, they utilize a successive combination of carefully chosen attacks to soften the enemy up for a killing blow. Rogues must take special care when selecting targets so that their combo attacks are not wasted, and they must be conscious of when to hide or flee if a battle turns against them.   </p>
+                                <p>Mages demolish their foes with arcane incantations. Although they wield powerful offensive spells, mages are fragile and lightly armored, making them particularly vulnerable to close-range attacks. Wise mages make careful use of their spells to keep their foes at a distance or hold them in place.</p>
                             </div>
                         </div>
                         <div className="col-12 col-lg-6">
@@ -60,7 +61,7 @@ const WarriorPage = () => {
                             </div>
                             <div className="content main-text">
                                 <ul>
-                                    <li>Leather</li>
+                                    <li>Cloth</li>
                                 </ul>
                             </div>
                         </div>

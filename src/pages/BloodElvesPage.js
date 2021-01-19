@@ -1,5 +1,5 @@
 import './styles/RacePages.css'
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MainBackground from '../assets/background-internal-blood-elf.jpg';
 import MainCharacter from '../assets/image-blood-elf-character.png';
 import PageRaceBackground from '../assets/background-blood-elf.jpg';
@@ -11,6 +11,10 @@ import RacesCrestList from '../components/RacesCrestList';
 
 const BloodElvesPage = () => {
     const[pageIndex] = useState(4);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
 
     return(
         <React.Fragment>
