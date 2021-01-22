@@ -1,5 +1,5 @@
 import './styles/About.css';
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import RacesCrestList from '../components/RacesCrestList';
 import RolesCrestList from '../components/RolesCrestList';

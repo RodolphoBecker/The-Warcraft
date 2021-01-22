@@ -1,4 +1,4 @@
-import './styles/RacePages.css'
+import './styles/RacePages.css';
 import React, {useState, useEffect} from 'react';
 import MainBackground from '../assets/background-internal-orc.jpg';
 import MainCharacter from '../assets/image-orc-character.png';

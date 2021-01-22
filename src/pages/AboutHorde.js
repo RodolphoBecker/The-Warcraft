@@ -12,7 +12,6 @@ import HordeBackground from '../assets/background-horde-page-01.jpg';
 // import TitleDecoration from '../assets/image-title-under.png';
 
 const AboutHorde = (props) => {
-
     useEffect(() => {
         props.layoutPage('Horde');
     });
@@ -64,7 +63,7 @@ const AboutHorde = (props) => {
                                         </div>
                                     </div>
                                     <div className="content w-100 d-flex flex-wrap">
-                                        <RacesCrestList races="Horde" />
+                                        <RacesCrestList races="Horde" raceSelected={props.raceSelected} raceName={props.raceName} />
                                     </div>
                                 </div>
                             </div>
