@@ -3,9 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutHorde from './pages/AboutHorde';
 import AboutAlliance from './pages/AboutAlliance';
-import ForsakenPage from './pages/ForsakenPage';
-import BloodElvesPage from './pages/BloodElvesPage';
-import GoblinPage from './pages/GoblinPage';
 import Header from './components/Header';
 import HordeLogo from './assets/logo-horde.png';
 import AllianceLogo from './assets/logo-alliance.png';
@@ -26,8 +23,6 @@ import Races from './pages/Races';
 
 const Routes = () => {
     const[layoutPage, setLayoutPage] = useState('')
-    const[raceSelected, setRaceSelected] = useState(null);
-    const[raceName, setRaceName] = useState(null);
 
     return(
         <BrowserRouter>
@@ -37,12 +32,9 @@ const Routes = () => {
 					    <Header hordeLogo={HordeLogo} allianceLogo={AllianceLogo} layoutPage={layoutPage} />
                         <div>
                             {/* Main-Pages */}
-                            <Route path="/about/horde" render={(props) => <AboutHorde layoutPage={setLayoutPage} raceSelected={setRaceSelected} raceName={setRaceName}  />} />
+                            <Route path="/about/horde" render={(props) => <AboutHorde layoutPage={setLayoutPage} />} />
                             <Route path="/about/alliance" render={(props) => <AboutAlliance layoutPage={setLayoutPage} />} />
                             {/* Horde-Race-Pages */}
-                            <Route path="/about/forsaken" component={ForsakenPage} />
-                            <Route path="/about/blood_elf" component={BloodElvesPage} />
-                            <Route path="/about/goblin" component={GoblinPage} />
                             {/* Class-Pages */}
                             <Route path="/about/warrior" component={WarriorPage} />
                             <Route path="/about/warlock" component={WarlockPage} />
@@ -57,7 +49,7 @@ const Routes = () => {
                             <Route path="/about/demonHunter" component={DemonHunterPage} />
                             <Route path="/about/deathKnight" component={DeathKnightPage} />
                             {/* Teste-Page */}
-                            <Route path="/about/races" render={(props) => <Races raceSelected={raceSelected}/>} /> 
+                            <Route path="/about/races" render={(props) => <Races />} /> 
                         </div>
                 </React.Fragment>
             </Switch>

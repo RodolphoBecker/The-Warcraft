@@ -41,7 +41,6 @@ const AboutHorde = (props) => {
                                     <div className="col-12 col-lg-3">
                                         <div className="stylized-title horde-title">
                                             <h1>About the Horde</h1>
-                                            {/* <div className="title-decoration" style={{ backgroundImage: `url(${TitleDecoration})` }}></div> */}
                                         </div>
                                     </div>
                                     <div className="col-12 col-lg-12">
@@ -59,11 +58,10 @@ const AboutHorde = (props) => {
                                     <div className="col-12 col-lg-12">
                                         <div className="stylized-title horde-title">
                                             <h1>Races</h1>
-                                            {/* <div className="title-decoration" style={{ backgroundImage: `url(${TitleDecoration})` }}></div> */}
                                         </div>
                                     </div>
                                     <div className="content w-100 d-flex flex-wrap">
-                                        <RacesCrestList races="Horde" raceSelected={props.raceSelected} raceName={props.raceName} />
+                                        <RacesCrestList races="Horde" />
                                     </div>
                                 </div>
                             </div>
