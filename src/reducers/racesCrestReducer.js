@@ -59,7 +59,7 @@ export const allianceRacesListReducer = () => {
 				id: 0,
 				race: 'Human',
 				crest: HumanCrest,
-				page: 'about/human'
+				page: 'about/races'
 			},
 			{
 				id: 1,

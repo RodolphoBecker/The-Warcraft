@@ -15,7 +15,6 @@ const AboutHorde = (props) => {
     useEffect(() => {
         props.layoutPage('Horde');
     });
-
     return(
         <ReactFullpage
             //fullpage options

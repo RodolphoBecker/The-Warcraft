@@ -11,10 +11,7 @@ const Races = (props) => {
     });
     
     const[factionSelected] = useState(props.hordeRaces[props.selectedRace].faction);
-    const[pageId] = useState(props.hordeRaces[props.selectedRace].id);
-
-    console.log(pageId);
-
+    console.log(props)
     return(
         <div style={{ backgroundColor: `${props.hordeRaces[props.selectedRace].color}` }}>
             <section id="main-section" className="internal-full-pages main-section" style={{ backgroundImage: `url(${props.hordeRaces[props.selectedRace].mainBackground})` }}>
@@ -86,7 +83,7 @@ const Races = (props) => {
                             </div>
                         </div>
                         <div className="content w-100 d-flex flex-wrap">
-                            <RacesCrestList races={factionSelected} pageId={pageId} />
+                            <RacesCrestList races={factionSelected} pageId={props.hordeRaces[props.selectedRace].id} />
                         </div> 
                     </div>
                 </div>
@@ -96,7 +93,8 @@ const Races = (props) => {
 };
 
 const mapStateToProps = (state) => {
-    return { hordeRaces: state.hordeRaces, selectedRace: state.selectedRace }
+    
+    return { hordeRaces: state.hordeRaces, allianceRaces: state.allianceRaces, selectedRace: state.selectedRace }
 }
 
 export default connect(mapStateToProps, {})(Races)

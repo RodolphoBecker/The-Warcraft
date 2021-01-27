@@ -7,8 +7,6 @@ import { selectRace } from '../actions';
 const RacesCresList = (props) => {
 	const mappedHordeRaces = props.hordeRacesList.map((race) => {
 		var emptySpace = '';
-
-		console.log(`Essa é o ID passado no Clique: ${props.pageId}`);
 		
 		if (props.pageId === race.id) {
 			emptySpace = 'd-none'

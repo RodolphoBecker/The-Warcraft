@@ -4,3 +4,10 @@ export const selectRace = (race) => {
         payload: race,
     }
 }
+
+export const selectRole = (role) => {
+    return{
+        type: 'ROLE_SELECTED',
+        payload: role,
+    }
+}
