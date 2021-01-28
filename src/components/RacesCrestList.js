@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { selectRace } from '../actions';
 
-const RacesCresList = (props) => {
+const RacesCresList = (props) => { 
 	const mappedHordeRaces = props.hordeRacesList.map((race) => {
 		var emptySpace = '';
 		
@@ -32,7 +32,7 @@ const RacesCresList = (props) => {
 		if (race.id === props.racePage) {
 			emptySpace = 'd-none'
 		}
-		
+		console.log(race.id)
 		return(
 			<div key={race.id} className={`col-12 col-lg-4 ${emptySpace}`} style={{ textAlign: "center" }}>
 				<Link to={race.page}>
@@ -56,7 +56,8 @@ const RacesCresList = (props) => {
 }
 
 const mapStateToProps = (state) => {
-	return { hordeRaces: state.hordeRaces, hordeRacesList: state.hordeRacesList, allianceRacesList: state.allianceRacesList}
+	console.log(state.allianceRacesList)
+	return { hordeRacesList: state.hordeRacesList, allianceRacesList: state.allianceRacesList}
 }
 
 export default connect(mapStateToProps, {

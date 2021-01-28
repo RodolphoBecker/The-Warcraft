@@ -11,3 +11,10 @@ export const selectRole = (role) => {
         payload: role,
     }
 }
+
+export const selectFaction = (faction) => {
+    return{
+        type: 'FACTION_SELECTED',
+        payload: faction,
+    }
+}

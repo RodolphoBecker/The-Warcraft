@@ -8,6 +8,12 @@ import { rolesPageReducer } from './rolesPageReducer';
 import { rolesCrestList } from './rolesCrestReducer';
 import { selectedRole } from './rolesCrestReducer';
 
+const selectedFactionReducer = (selectedFaction = 'Horde', action) => {
+    if( action.type === 'FACTION_SELECTED' ){
+		return action.payload
+    }
+	return selectedFaction;
+}
 
 export default combineReducers({
 	hordeRaces: hordeRacesPageReducers,
@@ -17,5 +23,6 @@ export default combineReducers({
 	selectedRace: selectedRaceReducer,
 	roles: rolesPageReducer,
 	rolesList: rolesCrestList,
-	selectedRole: selectedRole
+	selectedRole: selectedRole,
+	selectedFaction: selectedFactionReducer,
 })

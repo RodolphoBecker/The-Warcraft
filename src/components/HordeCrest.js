@@ -30,16 +30,16 @@ const HordeCrest = (props) => {
     return(
         <div className={`sides ${size} ${props.faction}`} style={{ backgroundImage:`url(${HordeColor})`, zIndex:zIndex}} >
             <div className="crest">
-                <button id="crestButton" onClick={() => hordeSelected()}>
+                <button className="crestButton" onClick={() => hordeSelected()}>
                     <img src={CrestHorde} alt=""></img>
                     <h1 className="warcraft-font">{factionText}</h1>
                 </button>
             </div>
             <div className="navigation d-flex">
                 <Link to='/about/horde'>
-                    <WarcraftButton buttonText="About" buttonShow={buttonShow} />
+                    <WarcraftButton buttonText="About" buttonShow={buttonShow} faction="Horde" />
                 </Link>
-                <WarcraftButton buttonText="Back" buttonBack={() => hordeUnselected()} buttonShow={buttonShow} />
+                <WarcraftButton buttonText="Back"  backFunction={true} buttonBack={() => hordeUnselected()} buttonShow={buttonShow} />
             </div>
         </div>
     );  

@@ -16,7 +16,7 @@ const AllianceCrest = (props) => {
         setFactionText('No one is more important than the Alliance.');
         setButtonShow('');
         setZIndex(1);
-        props.title('For the Alliance!');
+        props.title('For the Alliance!');  
     }
 
     const allianceUnselected = (event) => {
@@ -30,16 +30,16 @@ const AllianceCrest = (props) => {
     return(
         <div className={`sides ${size} ${props.faction}`} style={{ backgroundImage:`url(${AllianceColor})`, zIndex:zIndex}} >
             <div className="crest">
-                <button id="crestButton" onClick={() => allianceSelected()}>
+                <button className="crestButton" onClick={() => allianceSelected()}>
                     <img src={CrestAlliance} alt=""></img>
                     <h1 className="warcraft-font">{factionText}</h1>
                 </button>
             </div>
             <div className="navigation d-flex">
                 <Link to='/about/alliance'>
-                    <WarcraftButton buttonText="About" buttonShow={buttonShow} />
+                    <WarcraftButton buttonText="About" buttonShow={buttonShow} faction="Alliance" />
                 </Link>
-                <WarcraftButton buttonText="Back" buttonBack={() => allianceUnselected()} buttonShow={buttonShow} />
+                <WarcraftButton buttonText="Back" backFunction={true} buttonBack={() => allianceUnselected()} buttonShow={buttonShow} />
             </div>
         </div>
     );  

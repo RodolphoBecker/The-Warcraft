@@ -55,42 +55,42 @@ export const hordeRacesListReducer = () => {
 
 export const allianceRacesListReducer = () => {
 	return [
-			{
-				id: 0,
-				race: 'Human',
-				crest: HumanCrest,
-				page: 'about/races'
-			},
-			{
-				id: 1,
-				race: 'Dwarf',
-				crest: DwarfCrest,
-				page: 'about/dwarf'
-			},
-			{
-				id: 2,
-				race: 'Night Elf',
-				crest: NightElfCrest,
-				page: 'about/nightElf'
-			},
-			{
-				id: 3,
-				race: 'Gnome',
-				crest: GnomeCrest,
-				page: 'about/gnome'
-			},
-			{
-				id: 4,
-				race: 'Draenei',
-				crest: DraeneiCrest,
-				page: 'about/draenei'
-			},
-			{
-				id: 5,
-				race: 'Worgen',
-				crest: WorgenCrest,
-				page: 'about/WorgenCrest'
-			},
+		{
+			id: 0,
+			race: 'Human',
+			crest: HumanCrest,
+			page: '/about/races/alliance'
+		},
+		{
+			id: 1,
+			race: 'Dwarf',
+			crest: DwarfCrest,
+			page: '/about/races/alliance'
+		},
+		{
+			id: 2,
+			race: 'Night Elf',
+			crest: NightElfCrest,
+			page: '/about/races/alliance'
+		},
+		{
+			id: 3,
+			race: 'Gnome',
+			crest: GnomeCrest,
+			page: '/about/races/alliance'
+		},
+		{
+			id: 4,
+			race: 'Draenei',
+			crest: DraeneiCrest,
+			page: '/about/races/alliance'
+		},
+		{
+			id: 5,
+			race: 'Worgen',
+			crest: WorgenCrest,
+			page: '/about/races/alliance'
+		},
 	]
 }
 

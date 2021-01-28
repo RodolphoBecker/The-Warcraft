@@ -8,6 +8,7 @@ import HordeLogo from './assets/logo-horde.png';
 import AllianceLogo from './assets/logo-alliance.png';
 import RolesPage from './pages/Roles';
 import Races from './pages/Races';
+import RacesAlliance from './pages/RacesAlliance';
 
 const Routes = () => {
     const[layoutPage, setLayoutPage] = useState('')
@@ -22,6 +23,7 @@ const Routes = () => {
                         <Route path="/about/horde" render={(props) => <AboutHorde layoutPage={setLayoutPage} />} />
                         <Route path="/about/alliance" render={(props) => <AboutAlliance layoutPage={setLayoutPage} />} />
                         <Route path="/about/races" render={(props) => <Races />} />
+                        <Route path="/about/races/alliance" render={(props) => <RacesAlliance />} />
                         <Route path="/about/class" render={(props) => <RolesPage />} />
                     </div>
                 </React.Fragment>

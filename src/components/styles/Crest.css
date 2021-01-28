@@ -2,15 +2,15 @@
     position: absolute;
     bottom: 20%;
 }
-#crestButton:hover {
+.crestButton:hover {
     transition: all ease .5s;
     opacity: .7;
     transform: scale(.95);
 }
-#crestButton:focus {
+.crestButton:focus {
     outline:0;
 }
-#crestButton h1 {
+.crestButton h1 {
     color: #F6F25A
 }
 .general-content {

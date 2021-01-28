@@ -42,7 +42,6 @@ const AboutAlliance = (props) => {
                                     <div className="col-12 col-lg-4">
                                         <div className="stylized-title alliance-title">
                                             <h1>About the Alliance</h1>
-                                            {/* <div className="title-decoration" style={{ backgroundImage: `url(${TitleDecoration})` }}></div> */}
                                         </div>
                                     </div>
                                     <div className="col-12 col-lg-12">
@@ -60,7 +59,6 @@ const AboutAlliance = (props) => {
                                     <div className="col-12 col-lg-12">
                                         <div className="stylized-title alliance-title">
                                             <h1>Races</h1>
-                                            {/* <div className="title-decoration" style={{ backgroundImage: `url(${TitleDecoration})` }}></div> */}
                                         </div>
                                     </div>
                                     <div className="content w-100 d-flex flex-wrap">
