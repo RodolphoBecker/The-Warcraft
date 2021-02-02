@@ -1,12 +1,4 @@
 import { combineReducers } from 'redux';
-import hordeRacesPageReducers from './hordeRacesPageReducer';
-import allianceRacesPageReducer from './allianceRacesPageReducer';
-import { hordeRacesListReducer } from './racesCrestReducer';
-import { allianceRacesListReducer } from './racesCrestReducer';
-import { selectedRaceReducer } from './racesCrestReducer';
-import { rolesPageReducer } from './rolesPageReducer';
-import { rolesCrestList } from './rolesCrestReducer';
-import { selectedRole } from './rolesCrestReducer';
 
 const selectedFactionReducer = (selectedFaction = 'Horde', action) => {
     if( action.type === 'FACTION_SELECTED' ){
@@ -15,14 +7,22 @@ const selectedFactionReducer = (selectedFaction = 'Horde', action) => {
 	return selectedFaction;
 }
 
+const selectedRoleReducer = (selectedRole = 0, action) => {
+    if( action.type === 'ROLE_SELECTED' ){
+		return selectedRole = action.payload
+    }
+	return selectedRole;
+}
+
+const selectedRaceReducer = (selectedRace = 0, action) => {
+    if( action.type === 'RACE_SELECTED' ){
+		return selectedRace = action.payload
+    }
+	return selectedRace;
+}
+
 export default combineReducers({
-	hordeRaces: hordeRacesPageReducers,
-	hordeRacesList: hordeRacesListReducer,
-	allianceRaces: allianceRacesPageReducer,
-	allianceRacesList: allianceRacesListReducer,
 	selectedRace: selectedRaceReducer,
-	roles: rolesPageReducer,
-	rolesList: rolesCrestList,
-	selectedRole: selectedRole,
+	selectedRole: selectedRoleReducer,
 	selectedFaction: selectedFactionReducer,
 })

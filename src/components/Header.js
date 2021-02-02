@@ -7,7 +7,7 @@ import HeaderDivider from '../assets/image-column-divisor-02.png';
 const Header = (props) => {
     return(
         <React.Fragment>
-            {props.layoutPage === 'Horde' ?
+            {props.headerLayout === 'Horde' ?
                 <div id="header" className="headerComponent" style={{ backgroundImage: `url(${HeaderBackground})` }}>
                     <div className="container">
                         <div className="row">
@@ -49,3 +49,4 @@ const Header = (props) => {
 }
 
 export default Header;
+

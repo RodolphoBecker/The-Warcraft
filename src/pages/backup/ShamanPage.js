@@ -21,7 +21,6 @@ const WarriorPage = () => {
             <li>{weapon}</li>
         );
     });
-    console.log(pageIndex)
 
     return(
         <div style={{ backgroundColor: "#01000e" }}>

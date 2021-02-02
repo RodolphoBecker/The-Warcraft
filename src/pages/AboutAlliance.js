@@ -14,7 +14,7 @@ import AllianceBackground from '../assets/background-alliance-page-01.jpg';
 const AboutAlliance = (props) => {
 
     useEffect(() => {
-        props.layoutPage('Alliance');
+        props.headerLayout('Alliance');
     });
 
     return(

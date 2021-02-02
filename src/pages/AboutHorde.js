@@ -9,12 +9,12 @@ import StylizedDivider from '../assets/image-column-divisor.png';
 import SectionDivider from '../assets/image-column-divisor-02.png';
 import StandardBackground from '../assets/background-standard-brown.jpg';
 import HordeBackground from '../assets/background-horde-page-01.jpg';
-// import TitleDecoration from '../assets/image-title-under.png';
 
 const AboutHorde = (props) => {
     useEffect(() => {
-        props.layoutPage('Horde');
+        props.headerLayout('Horde');
     });
+
     return(
         <ReactFullpage
             //fullpage options
