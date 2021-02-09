@@ -145,6 +145,7 @@ const allianceRaceContent = [
 const RacesAlliance = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
+        props.headerLayout('Alliance');
     });
     console.log(props)
     const[factionSelected] = useState(allianceRaceContent[props.selectedRace].faction);

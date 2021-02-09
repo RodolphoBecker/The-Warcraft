@@ -1,11 +1,11 @@
 import './styles/About.css';
-import React, {useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import RolesCrestList from '../components/RolesCrestList';
 import StylizedDivider from '../assets/image-column-divisor.png';
 import SectionDivider from '../assets/image-column-divisor-02.png';
-import axios from 'axios';
-import Tilt from 'react-vanilla-tilt';
+// import axios from 'axios';
+// import Tilt from 'react-vanilla-tilt';
 
 import MainWarriorBackground from '../assets/roles/background-internal-warrior.jpg';
 import MainWarriorCharacterImage from '../assets/roles/image-warrior-character.png';
@@ -206,20 +206,20 @@ const rolesPageReducer = [
 const Roles = ({selectedRole}) => {
 
     useEffect(() => {
-        rolesResponse();
+        // rolesResponse();
     },[]);
 
     useEffect(()=> {
         window.scrollTo(0, 0);
     });
 
-    const[rolesApi, setRolesApi] = useState({});
-    const baseUrl = 'https://us.api.blizzard.com/data/wow/playable-class/index?namespace=static-us&locale=en_US&access_token=USwaRRukeSsv2ilL65jeOz3gB9HBh7SvEo';
+    // const[rolesApi, setRolesApi] = useState({});
+    // const baseUrl = 'https://us.api.blizzard.com/data/wow/playable-class/index?namespace=static-us&locale=en_US&access_token=USwaRRukeSsv2ilL65jeOz3gB9HBh7SvEo';
 
-    const rolesResponse = async () => {
-        const response = await axios.get(baseUrl, {})
-        setRolesApi(response);
-    }
+    // const rolesResponse = async () => {
+    //     const response = await axios.get(baseUrl, {})
+    //     setRolesApi(response);
+    // }
     
     const mappedWeapons = rolesPageReducer[selectedRole].weapons.map((weapon)=>{
         return(

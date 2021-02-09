@@ -22,8 +22,8 @@ const Routes = () => {
                     <div>
                         <Route path="/about/horde" render={(props) => <AboutHorde headerLayout={setHeaderLayout} />} />
                         <Route path="/about/alliance" render={(props) => <AboutAlliance headerLayout={setHeaderLayout} />} />
-                        <Route path="/about/races/horde" render={(props) => <RacesHorde />} />
-                        <Route path="/about/races/alliance" render={(props) => <RacesAlliance />} />
+                        <Route path="/about/races/horde" render={(props) => <RacesHorde headerLayout={setHeaderLayout} />} />
+                        <Route path="/about/races/alliance" render={(props) => <RacesAlliance headerLayout={setHeaderLayout} />} />
                         <Route path="/about/class" render={(props) => <RolesPage />} />
                     </div>
                 </React.Fragment>

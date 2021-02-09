@@ -9,6 +9,7 @@ import StylizedDivider from '../assets/image-column-divisor.png';
 import SectionDivider from '../assets/image-column-divisor-02.png';
 import StandardBackground from '../assets/background-standard-brown.jpg';
 import HordeBackground from '../assets/background-horde-page-01.jpg';
+import HordeHeroes from '../components/HordeHeroes';
 
 const AboutHorde = (props) => {
     useEffect(() => {
@@ -79,6 +80,13 @@ const AboutHorde = (props) => {
                                     <div className="content w-100 d-flex flex-wrap">
                                         <RolesCrestList />
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="heroes" className="section" style={{ backgroundImage: `url(${HordeColor})` }}>
+                            <div className="container">
+                                <div className="row">
+                                    <HordeHeroes />
                                 </div>
                             </div>
                         </div>

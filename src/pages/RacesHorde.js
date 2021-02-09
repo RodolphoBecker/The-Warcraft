@@ -155,6 +155,7 @@ const hordeRacesPageContent = [
 const Races = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0); 
+        props.headerLayout("Horde");
     });
 
     const[factionSelected] = useState(hordeRacesPageContent[props.selectedRace].faction);
